@@ -1,0 +1,9 @@
+{
+   "name": "MyCanvas",
+   "description": "Collaborative drawing canvas",
+   "author": "Vikash Mishra",
+   "dependencies": {
+      "express": "4.x",
+      "socket.io": "*"
+   }
+}

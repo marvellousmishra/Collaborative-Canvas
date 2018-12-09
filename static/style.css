@@ -1,0 +1,55 @@
+html, body {
+	font-family: sans-serif;
+	margin: 0;
+	width:100%;
+	height:100%;
+	}
+body {
+	display:flex;
+	flex-direction:column;
+}
+/* Header/logo Title */
+.header {
+	padding: 10px;
+	padding-left: 20px;
+	font-size: 30px;
+	font-weight: 100;
+	text-align: center;
+	background: #3b5998;
+	color: white;
+	height: 5vh;
+  }
+
+  /* Column container */
+  .main-container {  
+	display: flex;
+	height: 92vh;
+	background-color: #8b9dc3;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+	width: 65px;
+	background-color: #8b9dc3;
+	padding: 10px;
+  }
+  
+  /* Main column */
+  .main {
+		display:flex;
+			flex: 1 1 auto;
+	padding: 10px;
+  }
+	
+  /* Footer */
+  .footer {
+	background: #000000;
+	height: 4vh;
+  }
+	
+	canvas{
+ 		background-color:#dfe3ee;
+		position: absolute;
+		border: 1px solid gray;
+	}
