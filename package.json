@@ -1,7 +1,14 @@
 {
-   "name": "MyCanvas",
-   "description": "Collaborative drawing canvas",
+   "name": "CollaborativeCanvas",
+   "version": "1.0.0",
+   "repository": {
+      "type": "git",
+      "url": " https://github.com/marvellousmishra/Collaborative-Canvas"
+   },
+   "description": "A web app for collaborative drawing",
+   "main": "server.js",
    "author": "Vikash Mishra",
+   "license": "MIT",
    "dependencies": {
       "express": "4.x",
       "socket.io": "*"

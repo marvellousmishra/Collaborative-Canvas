@@ -4,12 +4,16 @@ var express = require('express'),
     httpServer = require('http').createServer(app),
     io = require('socket.io').listen(httpServer);
 
-// start webserver on port 8080
-httpServer.listen(8080);
+// start webserver on designated port [Default: 8000]
+var port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+httpServer.listen(port);
 
 // routing to static files
 app.use(express.static('./static'));
-console.log("Server running on 127.0.0.1:8080");
+console.log("Server running on designated port [Default: 8000]");
 
 // event-handler for new incoming connections
 io.on('connection', function (socket) {
