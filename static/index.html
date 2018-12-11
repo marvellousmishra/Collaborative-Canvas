@@ -1,34 +1,65 @@
 <!DOCTYPE html>
 <html lang="en"></html>
 <html>
-   <head>
-        <title>Canvas</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-        <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"> -->
-        <link rel="stylesheet" href="style.css" />
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <!-- <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script> -->
-        <!-- <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script> -->
-        <!-- <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script> -->
-        <script src="socket.io/socket.io.js"></script>
-        <script src="client.js"></script>
-   </head>
-   <body>
-        <!-- Header -->
-<div class="header">
-  <span>Collaborative Canvas</span>
-</div>
+  <head>
+    <title>Collaborative Canvas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+    <script src="socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <span>Collaborative Canvas</span>
+    </div>
 
-<!-- The flexible grid (content) -->
-<div class="main-container">
-  <div class="side"></div>
-  <div class="main">
-    <canvas id="drawing" width="1600" height="690"></canvas>
-  </div>
-</div>
-
-
-   </body>  
+    <!-- The main body -->
+    <div class="main-container">
+      <div class="side">
+        <button id="clear" class="button">Clear</button>
+        <label class="color-container">Color
+          <span class="checkmark">
+            <input id="colorbox" type="color" name="favcolor" value="#000000">
+          </span>
+        </label>
+        <label class="color-container">
+          <input id="sizebox" type="text" name="size" value="4">
+        </label>
+        <label class="container">Fill
+          <input id="fillbox" type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <div class="side-button">
+          <label class="container">Eraser
+            <input id="eraser" type="radio" name="radio" checked="checked">
+            <span class="checkmark"></span> 
+          </label>
+          <label class="container">Pen
+            <input id="pen" type="radio" name="radio" checked="checked">
+            <span class="checkmark"></span> 
+          </label>
+          <label class="container">Line
+            <input id="line" type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Circle
+            <input id="circle" type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Square
+            <input id="square" type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <div class="main">
+        <canvas id="canvas" width="1590" height="685"></canvas>
+      </div>
+    </div>
+  </body>  
 </html>
